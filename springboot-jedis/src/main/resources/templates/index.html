@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>后台</title>
+</head>
+<body>
+<table border="1">
+    <thead>
+    <tr>
+        <th>编号</th>
+        <th>名字</th>
+        <th>密码</th>
+        <th>操作</th>
+    </tr>
+    <tr th:each="user : ${userList}">
+        <td th:text="${user.userId}"></td>
+        <td th:text="${user.userName}"></td>
+        <td th:text="${user.password}"></td>
+        <td>
+            <a th:href="@{/del(id=${user.userId})}">删除</a>
+            <a th:href="@{/update(id=${user.userId},name=${user.userName},password=${user.password})}">修改</a>
+        </td>
+    </tr>
+    </thead>
+</table>
+</body>
+</html>

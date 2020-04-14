@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>注册</title>
+</head>
+<body>
+<form method="post" th:action="@{/doAdd}">
+    编号：<input name="id" type="text"/><br/>
+    名字：<input name="name" type="text"/><br/>
+    性别：<input name="sex" type="text"/><br/>
+    年龄：<input name="age" type="text"/><br/>
+    手机号码：<input name="phone" type="text"/><br/>
+    <button type="submit">提交</button>
+</form>
+</body>
+</html>

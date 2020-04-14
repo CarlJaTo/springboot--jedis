@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>注册</title>
+</head>
+<body>
+<form method="post" th:action="@{/doUpdate}">
+    编号：<input type="text" th:value="${user.userId}" name="id" readonly="readonly"><br>
+    名字：<input type="text" th:value="${user.userName}" name="name"><br>
+    手机号码：<input type="text" th:value="${user.password}" name="password"><br>
+    <input type="submit" value="修改">
+</form>
+</body>
+</html>
